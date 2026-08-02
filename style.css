@@ -1,0 +1,116 @@
+/* body {
+    text-align: center;
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+.board {
+    width: 300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+}
+
+.cell:hover {
+    background: #ddd;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Game board */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+    gap: 8px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Cells */
+.cell {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+}
+
+/* Hover effect */
+.cell:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* X style */
+.cell.x {
+    color: #ff4d4d;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* O style */
+.cell.o {
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Status text */
+h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .board {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+    }
+
+    .cell {
+        font-size: 2rem;
+    }
+}
